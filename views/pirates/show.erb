@@ -3,14 +3,10 @@
     <p id = "pirate[name]"><%=@pirates.name  %></p>
     <p id = "pirate[weight]"><%=@pirates.weight %></p>
     <p id = "pirate[height]"><%=@pirates.height %></p>
-
-<h2>Display your first ship here</h2>
-    <p id="ship_name_1"><%=@ships[0].name  %></p>
-    <p id="ship_type_1"><%=@ships[0].type  %></p>
-    <p id="ship_booty_1"><%=@ships[0].booty  %></p>
-
-<h2>Display your second ship here</h2>
-    <p id="ship_name_2"><%=@ships[1].name  %></p>
-    <p id="ship_type_2"><%=@ships[1].type  %></p>
-    <p id="ship_booty_2"><%=@ships[1].booty  %></p>
+    <h2>Display Ships</h2>
+    <% @ships.each do |ship|%>
+    <p><%= ship.name  %></p>
+    <p><%= ship.type %></p>
+    <p><%= ship.booty %></p>
+    <% end %>
 </form>
